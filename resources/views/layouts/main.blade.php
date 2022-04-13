@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        <link rel="shortcut icon" href="img/Logo-Copia.ico">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,7 +22,7 @@
         <link rel="stylesheet" href="/css/style.css">
         <script src="{{ asset('js/app.js') }}" defer></script>
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        
+        <link rel="shortcut icon" href="img/Logo-Copia.ico">
     </head>
     <body>
 
@@ -35,23 +36,45 @@
                     </a> 
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="/homes/casas" class="nav-link">Casas</a>
-                        </li>
-                        <li class="nav-item">
                             <a href="/homes/create" class="nav-link">Adicionar</a>
                         </li>
+                        @auth
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Entrar</a>
+                            <a href="/dashboard" class="nav-link">Casas</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/" class="nav-link">Cadastrar</a>
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <a href="/logout" 
+                                    class="nav-link" 
+                                    onclick="event.preventDefault(); 
+                                    this.closest('form').submit();">
+                                    Sair
+                                </a>
+                            </form>
                         </li>
+                        @endauth
+                        @guest
+                        <li class="nav-item">
+                            <a href="/login" class="nav-link">Entrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/register" class="nav-link">Cadastrar</a>
+                        </li>
+                        @endguest
                     </ul> 
                 </div> 
             </nav>
         </header>
 
-        @yield('content')
+        <main>
+            <div class="container-fluid">
+                @if(session('msg'))
+                    <p class="msg">{{session('msg')}}</p>
+                @endif
+                @yield('content')
+            </div>
+        </main>
 
         <footer>
 

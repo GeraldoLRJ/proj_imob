@@ -17,7 +17,18 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/homes/create', [HomeController::class, 'create']);
-Route::get('/homes/casas', [HomeController::class, 'casas']);
+Route::get('/homes/{id}', [HomeController::class, 'show']);
+Route::post('/homes', [HomeController::class, 'store']);
 Route::get('/contact', [HomeController::class, 'contact']);
 
 
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

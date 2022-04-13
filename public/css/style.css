@@ -1,7 +1,113 @@
 *{
     font-family: 'Roboto';
 }
+body{
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+.row{
+    margin: 0;
+}
+.container-fluid{
+    padding: 0 !important;
+}
+.btn-primary{
+    background-color: rgb(79, 80, 139) !important;
+    border: 2px rgb(252, 252, 252) !important;
+}
+
+.msg{
+    background-color: rgb(113, 190, 113);
+    color: green;
+    border: 1px rgb(113, 190, 113);
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+}
 
 #navbar img {
-    width: 70px;
+    width: 90px;
+    margin-left: 10px;
+}
+#navbar{
+    justify-content: space-between;
+    padding: 5px 0;
+}
+#navbar a {
+    font-size: 14px;
+    color:rgb(82, 82, 153)
+}
+#navbar a:hover {
+    color:blue
+}
+#search-container{
+    background-image: url("/img/banner.png");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    padding: 50px;
+    text-align: center;
+}
+
+#search-container h1 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    color:rgb(45, 45, 192)
+} 
+
+#search-container form{
+    width: 40%;
+    margin: 0 auto;
+}
+#homes-container {
+    padding: 50px;
+
+}
+#cards-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+}
+.card .img{
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+#homes-container .card{
+
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(93, 93, 192);
+    color: #fff;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.imoveis{
+    margin-left: 15% !important;
+    margin-top: 5% !important;
+}
+.img-fluid{
+    border-radius: 7px;
+}
+#info-container{
+    font-size: 20px !important;
+}
+#info-container icon-icon{
+    margin-top: 15px;
 }
