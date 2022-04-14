@@ -76,4 +76,21 @@ class HomeController extends Controller
         return view('homes.show', ['home' => $home]);
 
     }   
+
+    public function destroy($id){
+        Home::findOrFail($id)->delete();
+
+        return redirect('/')->with('msg', 'Imovel Deletado!!');
+    }
+
+    public function edit($id){
+        $home = Home::findOrFail($id);
+        return view('homes.edit', ['home' => $home]);
+    }
+
+    public function update(Request $request){
+
+        Home::findOrFail($request->id)->update($request->all());
+        return redirect('/')->with('msg', 'Imovel Atualizado!!');
+    }
 }

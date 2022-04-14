@@ -59,8 +59,4 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function homes(){
-        return $this->hasMany('App\Models\Event');
-    }
-
 }

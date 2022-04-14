@@ -20,8 +20,9 @@ Route::get('/homes/create', [HomeController::class, 'create']);
 Route::get('/homes/{id}', [HomeController::class, 'show']);
 Route::post('/homes', [HomeController::class, 'store']);
 Route::get('/contact', [HomeController::class, 'contact']);
-
-
+Route::delete('/homes/{id}', [HomeController::class, 'destroy']);
+Route::get('/homes/edit/{id}', [HomeController::class, 'edit']);
+Route::put('/homes/update/{id}', [HomeController::class, 'update']);
 
 Route::middleware([
     'auth:sanctum',

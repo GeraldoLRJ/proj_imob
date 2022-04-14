@@ -103,6 +103,15 @@ footer{
     margin-top: 5% !important;
 }
 .img-fluid{
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    border-radius: 7px;
+}
+.img-preview{
+ 
+    background-position: center !important;
+    max-height: 150px;
     border-radius: 7px;
 }
 #info-container{

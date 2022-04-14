@@ -35,13 +35,13 @@
                         <img src="/img/Logo.png" alt="IMOB">
                     </a> 
                     <ul class="navbar-nav">
+                        @auth
                         <li class="nav-item">
                             <a href="/homes/create" class="nav-link">Adicionar</a>
                         </li>
-                        @auth
-                        <li class="nav-item">
+                        <!--<li class="nav-item">
                             <a href="/dashboard" class="nav-link">Casas</a>
-                        </li>
+                        </li>-->
                         <li class="nav-item">
                             <form action="/logout" method="POST">
                                 @csrf
@@ -78,7 +78,7 @@
 
         <footer>
 
-            <p>Imob &copy; 2022 <button><a href="/contact" class="nav-link">Contato</a></button> </p>
+            <p>Imob &copy; 2022 </p>
 
         </footer>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
