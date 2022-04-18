@@ -53,7 +53,7 @@
                                 </a>
                             </form>
                         </li>
-                        @endauth
+                        
                         @guest
                         <li class="nav-item">
                             <a href="/login" class="nav-link">Entrar</a>
@@ -62,6 +62,7 @@
                             <a href="/register" class="nav-link">Cadastrar</a>
                         </li>
                         @endguest
+                        @endauth
                     </ul> 
                 </div> 
             </nav>
