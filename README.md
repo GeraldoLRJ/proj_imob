@@ -8,6 +8,6 @@ Instalando todos os itens já mencionados, será necessário que você execute a
 
 1- composer update/composer install <br>
 2- npm install <br>
-3- Abra o XAMP e dê um Start no Apache (Porta : 80, 43) e MySQL (Porta: 3306)
-4- php artisan migrate <br>
+3- Abra o XAMP e dê um Start no Apache (Porta : 80, 43) e MySQL (Porta: 3306) <br>
+4- php artisan migrate <br> 
 5- php artisan serve <br>
