@@ -6,7 +6,7 @@ Este projeto utiliza LARAVEL como Framework utilizado no backend. Para poder rod
 
 Instalando todos os itens já mencionados, será necessário que você execute alguns comandos:
 
-1- composer update/composer install
-2- npm install
-3- php artisan migrate
-4- php artisan serve
+1- composer update/composer install <br>
+2- npm install <br>
+3- php artisan migrate <br>
+4- php artisan serve <br>
